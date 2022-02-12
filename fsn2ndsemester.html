@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width">
+   <title>FSN_2nd year 1st Semester</title>
+   <link rel="icon" href="images/R.png" type="image/gif" sizes="16x16">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="css/style-2.css">
+</head>
+
+<body class="fsn" onload="realTimeClock()">
+   <!-- starts -->
+   <section class="second-year">
+      <div class="container">
+         <div class="row py-3">
+            <div class="col-12 main-header text-center">
+               <h1 class="p-1">BSc in Food Science and Nutrition - 2nd Year 1st Semester</h1>
+               <h4>MM:DD:YYYY<span class="date px-2 number" id="date"></span></h4>
+               <h4>Time<span class="time px-2 number" id="clock"></span></h4>
+            </div>
+            <div class="contents py-2">
+               <div class="c-heading">
+                  <h2>Subject Lists :</h2>
+               </div>
+               <div class="subjects">
+                  <ol>
+                     <li class="my-3"> <a href="Physiology.html">FSN21313: Human Physiology II <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="">FSN21314T: Food Safety and Regulations <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="">FSN21315T: Instrumental Methods in Food Analysis-I <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="">FSN21316T: Nutritional Biochemistry <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="">FSN21317T: Nutrition Through Life Cycle <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="">FSN21218P: Analysis of Foodborne Pathogens <span class="btn btn-success my-2">Go >></span></a> </li>
+                  </ol>
+               </div>
+            </div>            
+         </div>
+
+
+         <div class="text-center p-5">
+            <a class="btn btn-warning" href="color.html">
+               Random Color Generator
+            </a>
+         </div>
+      </div>
+   </section>
+
+   <!-- ends -->
+
+
+
+
+
+   <!-- footer starts -->
+   <footer class="footer pt-5">
+      <div class="container">
+         <div class="row ">
+               <h2>Follow</h2>
+               <ul class="list ">
+                  <li class=""><a href="https://www.facebook.com/rajib.sarker.758" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+               </ul>
+         </div>
+      </div>
+      <div class="div bottom py-4">
+         <p class="text-center">
+             <span>Rajib Sarker</span> 
+         </p>
+      </div>
+
+   </footer>
+   <!-- footer ends -->
+
+
+   <!-- scripts -->
+   <script src="https://use.fontawesome.com/8cb38a370b.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script>
+      var dt = new Date();
+      document.getElementById("date").innerHTML = dt.toLocaleDateString();
+   </script>
+   <script>
+         function realTimeClock() {
+
+            var rtClock = new Date();
+
+            var hours = rtClock.getHours();
+            var minutes = rtClock.getMinutes();
+            var seconds = rtClock.getSeconds();
+
+            var amPm = ( hours < 12 ) ? "AM" : "PM";
+
+            hours = (hours > 12) ? hours - 12 : hours;
+
+            hours = ("0" + hours).slice(-2);
+            minutes = ("0" + minutes).slice(-2);
+            seconds = ("0" + seconds).slice(-2);
+
+
+            document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds + amPm;
+
+            var t = setTimeout(realTimeClock, 500)
+         }
+   </script>
+   <!-- scripts -->
+</body>
+</html>

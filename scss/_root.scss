@@ -23,8 +23,12 @@ body{
 
 h1{
    font-family: 'Baloo_bhai_regular';
-   font-size: 46px;
+   font-size: 40px;
    outline: 1px solid rgb(140, 170, 69);
+
+   @media screen and (max-width: 768px) {
+      font-size: 25px;
+   }
 }
 
 
