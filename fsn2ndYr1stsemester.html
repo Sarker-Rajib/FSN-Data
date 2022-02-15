@@ -12,13 +12,13 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="fsn" onload="realTimeClock()">
+<body class="fsn" >
    <!-- starts -->
    <section class="second-year">
       <div class="container">
          <div class="row py-3">
             <div class="col-12 main-header text-center">
-               <h1 class="p-1">BSc in Food Science and Nutrition - 2nd Year 1st Semester</h1>
+               <h1 style="font-family: 'Helvetica Neue';" class="p-1">BSc in Food Science and Nutrition - 2nd Year 1st Semester</h1>
                <h4>MM:DD:YYYY<span class="date px-2 number" id="date"></span></h4>
                <h4>Time<span class="time px-2 number" id="clock"></span></h4>
             </div>
@@ -30,13 +30,17 @@
                   <ol>
                      <li class="my-3"> <a href="pages/FSN21313-Human-Physiology/Physiology.html">FSN21313: Human Physiology II <span class="btn btn-success my-2">Go >></span></a> </li>
                      <li class="my-3"> <a href="pages/FSN21314T-Food-Safety-and-Regulations/food-safety-and-regulation.html">FSN21314T: Food Safety and Regulations <span class="btn btn-success my-2">Go >></span></a> </li>
-                     <li class="my-3"> <a href="">FSN21315T: Instrumental Methods in Food Analysis-I <span class="btn btn-success my-2">Go >></span></a> </li>
-                     <li class="my-3"> <a href="">FSN21316T: Nutritional Biochemistry <span class="btn btn-success my-2">Go >></span></a> </li>
-                     <li class="my-3"> <a href="">FSN21317T: Nutrition Through Life Cycle <span class="btn btn-success my-2">Go >></span></a> </li>
-                     <li class="my-3"> <a href="">FSN21218P: Analysis of Foodborne Pathogens <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="pages/FSN21315TInstrumentalMethodsinFoodAnalysis-I/Instrumental-Methods-in-Food-Analysis-I.html">FSN21315T: Instrumental Methods in Food Analysis-I <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="pages/Nutritional-biochemistry/nutritional-biochemistry.html">FSN21316T: Nutritional Biochemistry <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="pages/NutritionThroughLifeCycle/NutritionThroughLifeCycle.html">FSN21317T: Nutrition Through Life Cycle <span class="btn btn-success my-2">Go >></span></a> </li>
+                     <li class="my-3"> <a href="pages/Analysis-of-foodBorne-pathogens/Analysis-of-foodBorne-pathogens.html">FSN21218P: Analysis of Foodborne Pathogens <span class="btn btn-success my-2">Go >></span></a> </li>
                   </ol>
                </div>
             </div>            
+         </div>
+
+         <div class="video">
+            <iframe class="ratio ratio-16x9" width="560" height="350" src="https://www.youtube.com/embed/-Rge1mjHBlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
 
 
@@ -47,6 +51,7 @@
          </div>
       </div>
    </section>
+
 
    <!-- ends -->
 
@@ -77,32 +82,42 @@
    <!-- scripts -->
    <script src="https://use.fontawesome.com/8cb38a370b.js"></script>
    <script src="js/bootstrap.min.js"></script>
+
    <script>
       var dt = new Date();
       document.getElementById("date").innerHTML = dt.toLocaleDateString();
    </script>
+
    <script>
-         function realTimeClock() {
+   //    function realTimeClock() {
 
-            var rtClock = new Date();
+   //    var rtClock = new Date();
 
-            var hours = rtClock.getHours();
-            var minutes = rtClock.getMinutes();
-            var seconds = rtClock.getSeconds();
+   //    var hours = rtClock.getHours();
+   //    var minutes = rtClock.getMinutes();
+   //    var seconds = rtClock.getSeconds();
 
-            var amPm = ( hours < 12 ) ? "AM" : "PM";
+   //    var amPm = ( hours < 12 ) ? "AM" : "PM";
+   //    hours = (hours > 12) ? hours - 12 : hours;
 
-            hours = (hours > 12) ? hours - 12 : hours;
-
-            hours = ("0" + hours).slice(-2);
-            minutes = ("0" + minutes).slice(-2);
-            seconds = ("0" + seconds).slice(-2);
+   //    hours = ("0" + hours).slice(-2);
+   //    minutes = ("0" + minutes).slice(-2);
+   //    seconds = ("0" + seconds).slice(-2);
 
 
-            document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds + amPm;
+   //    document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds + amPm;
 
-            var t = setTimeout(realTimeClock, 500)
-         }
+   //    var t = setTimeout(realTimeClock)
+   // }
+
+   let timer = ()=>{
+      const clock =  document.getElementById("clock");
+      clock.innerHTML = new Date().toLocaleTimeString('en-US');
+   }
+
+   setInterval(()=>timer(), 1000);
+
+   // setInterval(timer(), 1000)
    </script>
    <!-- scripts -->
 </body>
