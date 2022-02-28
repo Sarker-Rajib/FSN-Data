@@ -1,0 +1,50 @@
+.banner{
+   padding-top: 50px;
+   padding-bottom: 60px;
+
+   .container{
+      h3{
+         .sp{
+            font-family: oswald, sans-serif;
+            font-size: 16px;
+            color: rgb(93, 107, 126);
+         }
+      }
+
+      .video{
+         .iframe{
+
+            @media (min-width: 768px) {
+               width: 550px;
+               height: 300px;
+            }
+
+            @media (min-width: 992px) {
+               width: 750px;
+               height: 450px;
+            }
+         }
+      }
+   }
+
+
+   .corner-image{
+      position: relative;
+
+      .img-p{
+         position: absolute;
+         height: 500px;
+         right: -10px;
+         top: -200px;
+
+
+         @media (max-width: 767px){
+            height: 200px;
+            right: -12px;
+            top: -45px;
+         }
+      }
+   }
+
+}
+

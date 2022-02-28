@@ -1,0 +1,73 @@
+.fsn{
+
+   background: url(../images/bg.jpg) no-repeat top left/cover;
+  
+   .second-year{
+      .main-header{
+
+         .p-1{
+            color: rgb(22, 108, 179);
+            font-size: 40px;
+
+            @media screen and (max-width: 768px) {
+               font-size: 25px;               
+            }
+         }
+         
+
+         .number{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background:rgb(150, 175, 162);
+            margin-left: 10px;
+         }
+      }
+
+      .subject-card-section{
+
+         .card-items{
+            .card{
+               overflow: hidden;
+               height: 100%;
+               background: #2c92acb2;
+               border-radius: 1rem;
+               box-shadow: 0px 0px 5px 3px rgb(126, 221, 97);
+      
+               .card-image{
+                  object-fit: contain;
+
+               }
+               .card-text{
+                  text-align: center;
+
+                  h2{
+                     padding: 10px 0px;
+                     color: #fff;
+                     font-size: 30px;
+                  }
+               }
+
+            }
+         }
+      }
+
+      .video{
+         border-radius: 1rem;
+         overflow: hidden;
+         box-shadow: 0px 0px 5px 3px rgb(126, 221, 97);
+         margin: 0;
+         padding: 0;
+      }
+
+      .contents{
+         .subjects{
+            ol{
+               li{
+                  a{
+                     color:rgb(9, 17, 27);
+                  }
+               }
+            }
+         }
+      }
+   }
+}
