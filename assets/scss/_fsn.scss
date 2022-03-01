@@ -22,6 +22,18 @@
          }
       }
 
+
+      .notice-board{
+         background: rgba(43, 110, 82, 0.521);
+         border-radius: 1rem;
+         height: 45vh;
+         overflow-y: scroll;
+
+         td, td, th{
+            color: #fff;
+         }
+      }
+
       .subject-card-section{
 
          .card-items{
