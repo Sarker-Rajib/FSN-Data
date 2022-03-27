@@ -61,6 +61,7 @@
          
                   .card-image{
                      margin: auto;
+                     object-fit: contain;
 
                      @media screen and (max-width: 550px) {
                         width: 100px;
