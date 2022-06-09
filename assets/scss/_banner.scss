@@ -12,17 +12,9 @@
       }
 
       .video{
-         .iframe{
-
-            @media (min-width: 768px) {
-               width: 550px;
-               height: 300px;
-            }
-
-            @media (min-width: 992px) {
-               width: 750px;
-               height: 450px;
-            }
+         iframe{
+            border-top-right-radius: 115px;
+            border-bottom-left-radius: 115px;
          }
       }
    }
